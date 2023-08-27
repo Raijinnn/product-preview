@@ -1,19 +1,38 @@
 const form = document.getElementById("form");
 const input = document.getElementById("email");
 const span = document.getElementById("email-failed");
-const container = document.getElementById("")
+const user = document.getElementById('user-email');
+const container = document.getElementById('container');
+const successContainer = document.getElementById('success-card');
+const btnDismiss = document.getElementById('btn-dismiss')
 
+
+
+
+
+//form validation
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    let userEmail = input.value; 
+
     if (!input.value) {
-        span.classList.add('span-validation')
+        span.classList.add('d-inline')
         input.classList.add('input-fail')
-        console.log(input.value)
+        
     } else {
-        span.classList.remove('span-validation');
+        span.classList.remove('d-inline');
         input.classList.remove('input-fail')
-        console.log(input.value)
+        container.classList.add('d-none')
+        successContainer.classList.remove('d-none')
+        user.innerText = userEmail;
     }
 });
+
+btnDismiss.addEventListener('click', ()=>{
+
+    container.classList.remove('d-none');
+    successContainer.classList.add('d-none');
+
+})

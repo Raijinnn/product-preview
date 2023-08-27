@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <main class="container">
+
+    <main class="container" id="container">
         <div class="news-letter-text">
             <div class="info">
                 <h1>Stay updated!</h1>
@@ -19,7 +20,7 @@
                     <li>Measuring to ensure updates are a sucess</li>
                     <li>And much more!</li>
                 </ul>
-                <form  id="form">
+                <form id="form">
                     <label for="email">Email Address</label> <span id="email-failed" class="span-fail">Valid Email
                         Required</span>
                     <input type="email" id="email" class="email-input" placeholder="email@company.com">
@@ -34,6 +35,18 @@
             </div>
         </div>
     </main>
+
+    <div class="success-card d-none" id="success-card">
+        <div class="success-container">
+            <img src="images/icon-success.svg" alt="">
+            <h1>Thanks for subscribing!</h1>
+            <p>A confirmation email has been sent to <span id="user-email"></span>. Please open it and click the button
+                inside to confirm your subscription</p>
+            <button id="btn-dismiss">Dismiss message</button>
+        </div>
+    </div>
+
+
     <script src="app.js"></script>
 </body>
 
