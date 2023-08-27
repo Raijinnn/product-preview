@@ -72,7 +72,7 @@ body{
     margin: 15px 0;
 }
 
-.info input:active{
+.info input:hover{
     outline: auto;
 }
 
@@ -88,7 +88,7 @@ body{
     font-size: 0.938rem;
 }
 
-.info button:active{
+.info button:hover{
     background-image: linear-gradient(to right,#FF578F ,#FF6257 50%);
 }
 
@@ -97,12 +97,18 @@ body{
 }
 
 
-@media (max-width:835px) {
+@media (max-width:900px) {
     
+
+    body{
+        align-items: start;
+    }
+
+
     .news-letter-text{
         flex-direction: column;
         width: 500px;
-        padding: 0 0 10px 0 ;
+        padding: 0 0 15px 0 ;
     }
 
 
